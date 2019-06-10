@@ -1,5 +1,4 @@
 import csv
-#程序中间注释掉的代码是测试代码
 def readFile():
     try:
         fo = open('data.csv','r')
@@ -11,12 +10,6 @@ def readFile():
     except:
         fo = open('data.csv','w')
         data = []
-    #fo = open('data.csv','r')
-    #data = []
-    #for line in fo:
-    #    line = line.replace("\n","")
-    #    data.append(line.split(","))
-    #fo.close()
     return data
 def writeFile(data):
     f = open('data.csv','w',newline='')
@@ -190,19 +183,3 @@ def display(data):
         print("电话：{}".format(line[3]))
         print("----------")
     return data
-
-#错误代码----自己看----
-#def insertStu(item):
-#    filer,writes = writeFile()
-#    writes.writerow(item)
-#    filer.close()
-
-#def deletStu(item,ord):
-#    filer,writes = writeFile()
-#    for line in filer.readlines():
-#        print(line)
-#        #if line[ord] == item[ord]:
-
-
-#def editStu(item):
-#    filer,writes = writeFile()
